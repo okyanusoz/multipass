@@ -15,9 +15,9 @@
  *
  */
 
-#include <multipass/cli/table_formatter.h>
-
+#include <multipass/cli/alias_dict.h>
 #include <multipass/cli/format_utils.h>
+#include <multipass/cli/table_formatter.h>
 
 #include <multipass/format.h>
 
@@ -212,6 +212,33 @@ std::string mp::TableFormatter::format(const FindReply& reply) const
         fmt::format_to(buf, "{:<28}{:<18}{:<17}{:<}\n", mp::format::image_string_for(aliases[0]),
                        fmt::format("{}", fmt::join(aliases.cbegin() + 1, aliases.cend(), ",")), image.version(),
                        fmt::format("{}{}", image.os().empty() ? "" : image.os() + " ", image.release()));
+    }
+
+    return fmt::to_string(buf);
+}
+
+std::string mp::TableFormatter::format(const mp::AliasDict& aliases) const
+{
+    fmt::memory_buffer buf;
+
+    if (aliases.empty())
+        return "No aliases defined.\n";
+
+    const auto alias_width = mp::format::column_width(
+        aliases.cbegin(), aliases.cend(), [](const auto& alias) -> int { return alias.first.length(); }, 7);
+    const auto instance_width = mp::format::column_width(
+        aliases.cbegin(), aliases.cend(), [](const auto& alias) -> int { return alias.second.instance.length(); }, 10);
+
+    const auto row_format = "{:<{}}{:<{}}{:<}\n";
+
+    fmt::format_to(buf, row_format, "Alias", alias_width, "Instance", instance_width, "Command");
+
+    for (const auto& elt : sort_dict(aliases))
+    {
+        const auto& name = elt.first;
+        const auto& def = elt.second;
+
+        fmt::format_to(buf, row_format, name, alias_width, def.instance, instance_width, def.command);
     }
 
     return fmt::to_string(buf);
