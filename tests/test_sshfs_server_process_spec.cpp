@@ -19,9 +19,9 @@
 #include "mock_environment_helpers.h"
 #include "temp_dir.h"
 
-#include <src/platform/backends/shared/sshfs_server_process_spec.h>
-
 #include <multipass/sshfs_server_config.h>
+
+#include <src/platform/backends/shared/sshfs_server_process_spec.h>
 
 #include <QCoreApplication>
 

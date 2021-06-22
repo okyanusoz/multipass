@@ -16,6 +16,7 @@
  */
 
 #include "mock_dnsmasq_server.h"
+
 #include "tests/common.h"
 #include "tests/mock_environment_helpers.h"
 #include "tests/mock_process_factory.h"
@@ -33,6 +34,7 @@
 #include <multipass/platform.h>
 #include <multipass/virtual_machine.h>
 #include <multipass/virtual_machine_description.h>
+
 #include <src/platform/backends/qemu/qemu_virtual_machine.h>
 #include <src/platform/backends/qemu/qemu_virtual_machine_factory.h>
 

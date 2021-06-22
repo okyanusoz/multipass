@@ -26,6 +26,7 @@
 #include <multipass/exceptions/unsupported_remote_exception.h>
 #include <multipass/format.h>
 #include <multipass/query.h>
+
 #include <src/daemon/custom_image_host.h>
 
 #include <QUrl>

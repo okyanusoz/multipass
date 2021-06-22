@@ -30,11 +30,10 @@
 
 #include <multipass/constants.h>
 #include <multipass/exceptions/settings_exceptions.h>
-#include <multipass/logging/log.h>
+
 #include <src/client/cli/client.h>
 #include <src/daemon/daemon_rpc.h>
 
-#include <QEventLoop>
 #include <QKeySequence>
 #include <QStringList>
 #include <QTemporaryFile>
@@ -42,7 +41,6 @@
 
 #include <chrono>
 #include <initializer_list>
-#include <sstream>
 #include <thread>
 #include <utility>
 

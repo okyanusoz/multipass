@@ -23,7 +23,6 @@
 #include "mock_environment_helpers.h"
 #include "mock_logger.h"
 #include "mock_platform.h"
-#include "mock_process_factory.h"
 #include "mock_settings.h"
 #include "mock_utils.h"
 #include "mock_virtual_machine.h"
@@ -42,15 +41,13 @@
 
 #include <yaml-cpp/yaml.h>
 
-#include <QCoreApplication>
+#include <scope_guard.hpp>
+
 #include <QJsonDocument>
-#include <QJsonObject>
 #include <QNetworkProxyFactory>
 #include <QStorageInfo>
 #include <QString>
 #include <QSysInfo>
-
-#include <scope_guard.hpp>
 
 #include <memory>
 #include <ostream>

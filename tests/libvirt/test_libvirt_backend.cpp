@@ -27,7 +27,6 @@
 #include <multipass/auto_join_thread.h>
 #include <multipass/exceptions/start_exception.h>
 #include <multipass/memory_size.h>
-#include <multipass/platform.h>
 #include <multipass/virtual_machine.h>
 #include <multipass/virtual_machine_description.h>
 

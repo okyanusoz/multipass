@@ -21,6 +21,7 @@
 
 #include <multipass/exceptions/ssh_exception.h>
 #include <multipass/ssh/ssh_session.h>
+
 #include <shared/base_virtual_machine.h>
 
 namespace mp = multipass;

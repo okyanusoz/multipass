@@ -23,6 +23,7 @@
 #include <multipass/network_interface_info.h>
 #include <multipass/virtual_machine_description.h>
 #include <multipass/vm_status_monitor.h>
+
 #include <shared/base_virtual_machine_factory.h>
 
 namespace mp = multipass;

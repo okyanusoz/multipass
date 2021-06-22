@@ -16,6 +16,7 @@
  */
 
 #include "mock_aa_syscalls.h"
+
 #include "tests/common.h"
 #include "tests/mock_environment_helpers.h"
 #include "tests/mock_logger.h"

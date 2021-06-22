@@ -18,12 +18,12 @@
 #include "common.h"
 
 #include <multipass/constants.h>
+#include <multipass/exceptions/settings_exceptions.h>
 #include <multipass/platform.h>
 
 #include <src/platform/platform_shared.h>
 
 #include <QKeySequence>
-#include <multipass/exceptions/settings_exceptions.h>
 
 namespace mp = multipass;
 namespace mpt = mp::test;

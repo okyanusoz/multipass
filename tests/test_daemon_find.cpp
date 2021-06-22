@@ -22,8 +22,8 @@
 #include "mock_vm_workflow_provider.h"
 
 #include <multipass/format.h>
+
 #include <src/daemon/daemon.h>
-#include <src/daemon/daemon_rpc.h>
 
 namespace mp = multipass;
 namespace mpt = multipass::test;

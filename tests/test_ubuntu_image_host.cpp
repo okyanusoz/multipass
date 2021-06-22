@@ -26,6 +26,7 @@
 #include <multipass/exceptions/unsupported_image_exception.h>
 #include <multipass/exceptions/unsupported_remote_exception.h>
 #include <multipass/query.h>
+
 #include <src/daemon/ubuntu_image_host.h>
 
 #include <QUrl>

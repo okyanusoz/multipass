@@ -15,13 +15,10 @@
  *
  */
 
-#include <src/platform/backends/lxd/lxd_virtual_machine.h>
-#include <src/platform/backends/lxd/lxd_virtual_machine_factory.h>
-#include <src/platform/backends/lxd/lxd_vm_image_vault.h>
-
 #include "mock_local_socket_reply.h"
 #include "mock_lxd_server_responses.h"
 #include "mock_network_access_manager.h"
+
 #include "tests/common.h"
 #include "tests/mock_backend_utils.h"
 #include "tests/mock_environment_helpers.h"
@@ -39,6 +36,10 @@
 #include <multipass/memory_size.h>
 #include <multipass/network_interface_info.h>
 #include <multipass/virtual_machine_description.h>
+
+#include <src/platform/backends/lxd/lxd_virtual_machine.h>
+#include <src/platform/backends/lxd/lxd_virtual_machine_factory.h>
+#include <src/platform/backends/lxd/lxd_vm_image_vault.h>
 
 #include <QJsonDocument>
 #include <QString>
