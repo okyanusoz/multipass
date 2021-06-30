@@ -17,7 +17,6 @@
 
 #include "common.h"
 #include "disabling_macros.h"
-#include "extra_assertions.h"
 #include "mock_environment_helpers.h"
 #include "mock_settings.h"
 #include "mock_standard_paths.h"
