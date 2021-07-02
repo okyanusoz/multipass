@@ -159,7 +159,12 @@ target_include_directories(multipass_tests
     PRIVATE ${CMAKE_SOURCE_DIR}/src/platform/backends/shared/linux
 )
 
-add_subdirectory(libvirt)
-add_subdirectory(linux)
-add_subdirectory(qemu)
-add_subdirectory(lxd)
+if(LINUX)
+  add_subdirectory(libvirt)
+  add_subdirectory(linux)
+  add_subdirectory(lxd)
+endif()
+
+if(UNIX)
+  add_subdirectory(qemu)
+endif()
